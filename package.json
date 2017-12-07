@@ -12,8 +12,9 @@
     "stressTest": "mocha test/stress.js",
     "flatten": "node tools/flatten.js",
     "generate": "node dist/tools/generateMessages.js",
-    "compile": "babel --presets es2015 src/ -d dist/",
-    "prepublish": "npm run compile"
+    "compile": "npx babel-cli --presets es2015 src/ -d dist/",
+    "prepublish": "npm run compile",
+    "postinstall": "npm run compile"
   },
   "author": "chris smith",
   "license": "Apache-2.0",
